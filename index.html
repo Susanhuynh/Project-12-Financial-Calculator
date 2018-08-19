@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <h2 class="text-center">Financial Calculator</h2>
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-md-offset-3 col-xs-offset-3 col-sm-offset-3 col-lg-offset-3"> 
+            <table class="table table-hover table-responsive">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Check</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- CURRENCY -->
+                    <tr>
+                        <td><label class="control-label">Currency:</label></td>
+                        <td> 
+                            <select id="currency" class="form-control">
+                                <option value="$">Dollar</option>
+                                <option value="€">Euro</option>
+                                <option value="£">Pound</option>
+                                <option value="*">Other</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- BASE AMOUNT -->
+                    <tr>
+                        <td><label class="control-label">Base amount:</label></td>
+                        <td><input type="text" id="base_amount" class="form-control" required="required"></input></td>
+                    </tr>
+                    <!-- ANNUAL INTEREST RATE -->
+                    <tr>
+                        <td><label class="control-label">Annual Interest Rate:</label></td>
+                        <td><input type="text" id="annual_interest" class="form-control" required="required"></input></td>
+                    </tr>
+                    <!-- PERIOD -->
+                    <tr>
+                        <td><label class="control-label">Calculation Period:</label></td>
+                        <td> 
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <input type="text" id="period" class="form-control" required="required"></input>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <select id="period_choice" class="form-control">
+                                <option value="Year">Yearly</option>
+                                <option value="Month">Monthly</option>
+                            </select>
+                            </div>
+                        </div>
+                        </td>
+                    </tr>
+                    <!-- MONTHLY DEPOSIT -->
+                    <tr>
+                        <td><label class="control-label">Regular Monthly Deposit:</label></td>
+                        <td><input type="text" id="regular_deposit" class="form-control" required="required"></input></td>
+                    </tr>
+                    <!-- INTERVAL -->
+                    <tr>
+                        <td><label class="control-label">Compound Interval:</label></td>
+                        <td> 
+                            <select id="interval" class="form-control">
+                                <option value="365">Daily</option>
+                                <option value="12" class="active">Monthly</option>
+                                <option value="3">Quarterly</option>
+                                <option value="2">Half Yearly</option>
+                                <option value="1">Yearly</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <div class="text-center">
+                <button type="button" class="btn btn-danger" id="calculate">Calculate</button>
+                <button type="button" class="btn btn-primary disabled" id="clear">Clear it</button>
+            </div>
+            
+            
+        </div>
+    </div>
+    <!-- TABLE --> 
+    
+    <div class="row" id="table">
+        <!-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-md-offset-3 col-xs-offset-3 col-sm-offset-3 col-lg-offset-3">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Deposit</th>
+                        <th>Interest</th>
+                        <th>Total Deposits</th>
+                        <th>Total Interest</th>
+                        <th>Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> -->
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>    
+    <script src="js/form.js"></script>
+</body>
+</html>
